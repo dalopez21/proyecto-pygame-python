@@ -4,10 +4,15 @@ import constantes
 import variables
 from personaje import Personaje
 
-variables.jugador
+
 
 if __name__ == '__main__': # Condicion para empezar el programa en python
     pygame.init() # Inicio del juego
+
+    
+    variables.player_image # variable de la imagen personaje
+    variables.jugador # Jugador
+
     ventana = pygame.display.set_mode((constantes.ANCHO_VENTANA, constantes.ALTO_VENTANA)) # Creacion de ventana grafica
     pygame.display.set_caption("Guerra de numeros") # Titulo del juego
 
@@ -26,7 +31,7 @@ if __name__ == '__main__': # Condicion para empezar el programa en python
         
         # Calcular el movimiento del jugador que empieza en cero
         desplazamiento_x = 0
-        desplazamiento_y = 0 
+        desplazamiento_y = 0
 
         if variables.mover_derecha:
             desplazamiento_x = constantes.VELOCIDAD # velocidad del eje x a la derecha
