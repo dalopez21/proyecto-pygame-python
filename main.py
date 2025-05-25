@@ -14,7 +14,7 @@ if __name__ == '__main__': # Condicion para empezar el programa en python
     variables.jugador # Jugador
 
     ventana = pygame.display.set_mode((constantes.ANCHO_VENTANA, constantes.ALTO_VENTANA)) # Creacion de ventana grafica
-    pygame.display.set_caption("Guerra de numeros") # Titulo del juego
+    pygame.display.set_caption("Subir a la cima") # Titulo del juego
 
     #movimiento jugador
     variables.mover_arriba 
