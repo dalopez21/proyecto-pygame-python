@@ -2,13 +2,20 @@ from personaje import Personaje
 import pygame
 import constantes
 
-#Jugador_1
-player_image = pygame.image.load("assets//images//characters//player//bitmap.png") # Direccion de la imagen
+def escalar_img(image,scale):
+    w = image.get_width() #Ancho de la imagen
+    h = image.get_height() #Alto de la imagen
+    nueva_imagen = pygame.transform.scale(image,(w*scale,h*scale)) # transformacion de la imagen por la escala
+    return nueva_imagen
 
-player_image = pygame.transform.scale(player_image, (player_image.get_width()*constantes.SCALA_PERSONAJE,
-                                                     player_image.get_height()*constantes.SCALA_PERSONAJE)) # El tamaño de la imagen del jugador_1
+animaciones = []
+for i in range(2):
+    img = pygame.image.load(f"assets//images//characters//player//bitmap{i}.png") #Direccion de la imagen Personaje
+    img = escalar_img(img,constantes.SCALA_PERSONAJE) # Tamaño de la imagen del personaje
+    animaciones.append(img) # Guardar las imagenes en animaciones
 
-jugador = Personaje(50, 50, player_image) # Posicion inicial del jugador en la ventana grafica
+
+jugador = Personaje(50, 50, animaciones) # Posicion inicial del jugador en la ventana grafica
 
 # Movimiento del jugador en falso para que no se mueva
 mover_arriba = False 

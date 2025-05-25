@@ -9,8 +9,7 @@ from personaje import Personaje
 if __name__ == '__main__': # Condicion para empezar el programa en python
     pygame.init() # Inicio del juego
 
-    
-    variables.player_image # variable de la imagen personaje
+    variables.animaciones # variable de la imagen personaje
     variables.jugador # Jugador
 
     ventana = pygame.display.set_mode((constantes.ANCHO_VENTANA, constantes.ALTO_VENTANA)) # Creacion de ventana grafica
@@ -43,6 +42,7 @@ if __name__ == '__main__': # Condicion para empezar el programa en python
             desplazamiento_y = constantes.VELOCIDAD # velocidad del eje y hacia abajo
 
         variables.jugador.movimiento(desplazamiento_x, desplazamiento_y) # Movimiento del jugador en la pantalla
+        variables.jugador.update() # metodo para animar la imagen del personaje
 
         for evento in pygame.event.get(): # Recorre los eventos del juego
             if evento.type == pygame.QUIT: # Si el tipo de evento es Quit (cerrar en la x o alt f4)
