@@ -9,7 +9,7 @@ def escalar_img(image,scale):
     return nueva_imagen
 
 animaciones = []
-for i in range(2):
+for i in range(12):
     img = pygame.image.load(f"assets//images//characters//player//bitmap{i}.png") #Direccion de la imagen Personaje
     img = escalar_img(img,constantes.SCALA_PERSONAJE) # Tamaño de la imagen del personaje
     animaciones.append(img) # Guardar las imagenes en animaciones

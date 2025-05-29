@@ -12,7 +12,7 @@ class Personaje:
         self.forma.center = (x,y) # Constructor del punto inicial de la forma del personaje
 
     def update(self): # metodo para actualizar la animacion
-        cooldown_animaciones = 500 # tiempo de la imagen antes de cambiar a otra
+        cooldown_animaciones = 50 # tiempo de la imagen antes de cambiar a otra
         self.image = self.animaciones[self.frame_index] # actualiza la imagen por cada frame_index
         if pygame.time.get_ticks() - self.update_time >= cooldown_animaciones: # Diferencia del tiempo actual frente al update time
             self.frame_index = self.frame_index + 1 # Se actualiza el frame_index cada vez que se llegue al cooldown
